@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import {changeName, changeAge, changeEyeColor, changeHairColor} from '../actions';
 import {connect} from 'react-redux';
-import PersonalInformationForm from '../components/PersonalInformationForm';
-import Greeting from '../components/Greeting';
+import UserSite from '../components/UserSite';
+import data from '../data';
 
+
+//imgUrl: PropTypes.string.isRequired,
+//    description: PropTypes.string.isRequired,
+//    userName: PropTypes.string.isRequired,
+//    views: PropTypes.number.isRequired,
+//    comments: PropTypes.array.isRequired,
+//    likes: PropTypes.number.isRequired
 
 let App = (props) => {
     return (
         <div>
-            <PersonalInformationForm onChangeName={props.onChangeName} onChangeAge={props.onChangeAge}/>
-            <Greeting name={props.name} age={props.age}/>
+            <UserSite site={data.sites[0]}  />
         </div>
     )
 };
