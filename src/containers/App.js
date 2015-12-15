@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {changeName, changeAge, changeEyeColor, changeHairColor} from '../actions';
 import {connect} from 'react-redux';
 import UserSite from '../components/UserSite';
 import UserSitesContainer from '../containers/UserSitesContainer';
+import CategoryFilter from '../containers/CategoryFilter';
 import data from '../data';
-
+const CATEGORIES = ['business', 'store', 'photography', 'music', 'design', 'restaurant', 'accommodation', 'events', 'portfolio', 'other'];
 
 //imgUrl: PropTypes.string.isRequired,
 //    description: PropTypes.string.isRequired,
@@ -16,7 +16,8 @@ import data from '../data';
 let App = (props) => {
     return (
         <div>
-            <UserSitesContainer sites={props.sites} />
+            <CategoryFilter categories={CATEGORIES}/>
+            <UserSitesContainer sites={props.sites}/>
         </div>
     )
 };
@@ -26,7 +27,6 @@ function mapStateToProps(state) {
         sites: state.sites
     };
 }
-
 
 
 export default connect(

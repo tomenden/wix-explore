@@ -1,17 +1,9 @@
-export const CHANGE_NAME = 'CHANGE_NAME';
-export const CHANGE_AGE = 'CHANGE_AGE';
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
 
-export function changeName(newName) {
+export function changeCategory(newCategory) {
     return {
-        type: CHANGE_NAME,
-        newName: newName
-    };
-}
-
-export function changeAge(newAge) {
-    return {
-        type: CHANGE_AGE,
-        newAge: newAge
+        type: CHANGE_CATEGORY,
+        category: newCategory
     };
 }
 

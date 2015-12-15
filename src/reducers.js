@@ -1,4 +1,4 @@
-import {CHANGE_NAME, CHANGE_AGE, CHANGE_HAIR_COLOR, CHANGE_EYE_COLOR} from './actions';
+import {CHANGE_CATEGORY} from './actions';
 import {combineReducers} from 'redux';
 import data from './data';
 
@@ -10,7 +10,17 @@ let sites = (state = data.sites, action) => {
     }
 };
 
+let filter = (state = 'all', action) => {
+    switch (action.type) {
+        case CHANGE_CATEGORY:
+            return action.category;
+        default:
+            return state;
+    }
+};
+
 export const rootReducer = combineReducers({
-        sites
+        sites,
+        filter
     }
 );
