@@ -1,0 +1,9 @@
+.user-sites-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-site {
+    width: 30%;
+
+}

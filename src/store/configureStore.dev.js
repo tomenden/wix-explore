@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { persistState } from 'redux-devtools';
-import {greeterApp} from '../reducers';
+import {rootReducer} from '../reducers';
 import DevTools from '../containers/DevTools';
 
 const finalCreateStore = compose(
@@ -20,7 +20,7 @@ function getDebugSessionKey() {
 }
 
 export default function configureStore(initialState) {
-    const store = finalCreateStore(greeterApp, initialState);
+    const store = finalCreateStore(rootReducer, initialState);
 
     // Hot reload reducers (requires Webpack or Browserify HMR to be enabled)
     if (module.hot) {
