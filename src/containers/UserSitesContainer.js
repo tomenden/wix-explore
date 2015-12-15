@@ -8,7 +8,9 @@ let UserSitesContainer = (props) => {
     return (
         <div className="user-sites-container">
             {
-                _.map(props.sites, (site) => {
+                props.sites.filter((site)=> {
+                    return site.category === props.filter || props.filter === 'all';
+                }).map( (site) => {
                     return <UserSite site={site} key={site.id} />
                 })
             }

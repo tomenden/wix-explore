@@ -4,7 +4,7 @@ import UserSite from '../components/UserSite';
 import UserSitesContainer from '../containers/UserSitesContainer';
 import CategoryFilter from '../containers/CategoryFilter';
 import data from '../data';
-const CATEGORIES = ['business', 'store', 'photography', 'music', 'design', 'restaurant', 'accommodation', 'events', 'portfolio', 'other'];
+const CATEGORIES = ['all', 'business', 'store', 'photography', 'music', 'design', 'restaurant', 'accommodation', 'events', 'portfolio', 'other'];
 
 //imgUrl: PropTypes.string.isRequired,
 //    description: PropTypes.string.isRequired,
@@ -17,14 +17,15 @@ let App = (props) => {
     return (
         <div>
             <CategoryFilter categories={CATEGORIES}/>
-            <UserSitesContainer sites={props.sites}/>
+            <UserSitesContainer sites={props.sites} filter={props.filter}/>
         </div>
     )
 };
 
 function mapStateToProps(state) {
     return {
-        sites: state.sites
+        sites: state.sites,
+        filter: state.filter
     };
 }
 
