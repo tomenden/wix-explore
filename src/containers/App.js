@@ -12,6 +12,7 @@ let App = (props) => {
         <div>
             <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory} selected={props.filter}/>
             <UserSitesContainer sites={props.sites} filter={props.filter}/>
+
         </div>
     )
 };
