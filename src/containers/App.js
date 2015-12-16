@@ -2,21 +2,15 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import UserSite from '../components/UserSite';
 import UserSitesContainer from '../containers/UserSitesContainer';
-import CategoryFilter from '../containers/CategoryFilter';
+import CategorySelector from '../components/CategorySelector';
 import data from '../data';
+import {changeCategory} from '../actions';
 const CATEGORIES = ['all', 'business', 'store', 'photography', 'music', 'design', 'restaurant', 'accommodation', 'events', 'portfolio', 'other'];
-
-//imgUrl: PropTypes.string.isRequired,
-//    description: PropTypes.string.isRequired,
-//    userName: PropTypes.string.isRequired,
-//    views: PropTypes.number.isRequired,
-//    comments: PropTypes.array.isRequired,
-//    likes: PropTypes.number.isRequired
 
 let App = (props) => {
     return (
         <div>
-            <CategoryFilter categories={CATEGORIES}/>
+            <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory} selected={props.filter}/>
             <UserSitesContainer sites={props.sites} filter={props.filter}/>
         </div>
     )
@@ -29,7 +23,14 @@ function mapStateToProps(state) {
     };
 }
 
+function mapDispatchToProps(dispatch) {
+    return {
+        onChangeCategory: (newCategory) => dispatch(changeCategory(newCategory))
+    };
+}
+
 
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(App);
