@@ -8,21 +8,17 @@ let CategoryFilter = (props) => {
     return (
         <ul>
             {
-                _.map(props.categories, (category) => {
-                    return <li onClick={()=>{
-                    console.log('hi');
-                    props.changeCategory(category)}}>{category}</li>;
+                _.map(props.categories, (category, index) => {
+                    return (
+                        <li onClick={()=>props.changeCategory(category)}
+                            key={index}>
+                            {category}
+                        </li>);
                 })
             }
         </ul>
     );
 };
-
-//function mapStateToProps(state) {
-//    return {
-//        categories: state.categories
-//    };
-//}
 
 function mapDispatchToProps(dispatch) {
     return {

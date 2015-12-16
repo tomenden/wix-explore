@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-//import '../style/main.css';
+import '../style/main.css';
 
 
 export default class UserSite extends Component {
