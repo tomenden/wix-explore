@@ -32,23 +32,35 @@ body {
     text-align: center;
 }
 
-.like-icon-liked .heart {
-    fill: #F2564D;
+.like-icon {
+    height: 18px;
+    width: 23px;
 }
+
 
 .social-bar {
     display: flex;
     flex-direction: row;
 }
 
-/*.like-icon {*/
+.social-bar img {
+    margin-right: 5px;
+    margin-left: 5px;
+}
 
-/*}*/
+.like-icon-empty {
+    display: inline-block;
+}
 
-/*.like-icon:not(.like-icon-liked) {*/
-    /*background-image: url(/src/images/like.svg);*/
-/*}*/
+.like-icon-full {
+    display: none;
+}
 
-/*.like-icon.like-icon-liked {*/
-    /*background-image: url(/src/images/like-full.svg);*/
-/*}*/
+
+.liked > .like-icon-empty{
+    display: none;
+}
+
+.liked > .like-icon-full {
+    display: inline-block;
+}

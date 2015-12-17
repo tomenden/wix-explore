@@ -10,8 +10,7 @@ export default class UserSite extends Component {
         let {thumbnailUrl, description, authorUserName, views, comments = [], likes = [], id:siteId} = this.props.site;
         let {userName, likeFunction} = this.props;
         let likeClasses = classNames({
-            'like-icon': true,
-            'like-icon-liked': _.includes(likes, userName)
+            'liked': _.includes(likes, userName)
         });
         return (
             <div className="user-site">
@@ -23,8 +22,10 @@ export default class UserSite extends Component {
 
                 <div className="social-bar">
                     <div>
-                        <object type="image/svg+xml" data="/src/images/heart.svg" className={likeClasses}
-                                onClick={()=>likeFunction(siteId)}/>
+                        <span onClick={()=>likeFunction(siteId)} className={likeClasses}>
+                            <img src="/src/images/like.svg" className="like-icon like-icon-empty"/>
+                            <img src="/src/images/like-full.svg" className="like-icon like-icon-full"/>
+                        </span>
 
                         {_.get(likes, 'length', 0)}
                         <img src="/src/images/views.svg"/>{views}
