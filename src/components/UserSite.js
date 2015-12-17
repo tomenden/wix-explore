@@ -3,7 +3,6 @@ import '../style/main.css';
 import classNames from 'classnames';
 import _ from 'lodash';
 import InlineSVG from 'svg-inline-react';
-import * as heartSvg from '../images/heart.svg';
 
 export default class UserSite extends Component {
     render() {

@@ -83,3 +83,39 @@ body {
 .social-section:not(:last-child) {
     margin-right: 23px;
 }
+body{
+    margin: 1px;
+}
+/*popup*/
+
+.user-site-popup {
+    height: 1000px;
+    border: 1px solid black;
+}
+
+.user-site-popup .author-container {
+    float: left;
+    background-color:  #ffffff;
+    width: 449px;
+    height: 1007px;    border: 1px solid black;
+}
+.user-site-popup .site-container {
+    background-color:  #eff1f2;
+    float: left;
+    height: 100%;
+    width: 976px;
+    border: 1px solid black;
+}
+.user-site-popup .site-container .site-thumbnail{
+    /*float: left;*/
+    height: 520px;
+    width: 850px;
+    margin: 92px 0 0 84px;
+    border: 1px solid black;
+}
+.user-site-popup .extra-container {
+    float: left;
+    height: 100%;
+    /*width: 200px;*/
+    border: 1px solid black;
+}
