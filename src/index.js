@@ -1,13 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
-import {Provider} from 'react-redux';
+
 import configureStore from './store/configureStore';
+
 import Root from './containers/Root';
 
-const store = configureStore();
+import Firebase from 'firebase';
+import {FIREBASE_URL} from './constants'
+import {firebaseActions} from './actions/firebase';
 
-var rootElement = document.getElementById('root');
+const store = configureStore();
+store.dispatch(firebaseActions.setFirebaseRef(new Firebase(FIREBASE_URL)));
+
 
 render(
     <Root store={store}/>,
-    rootElement);
+    document.getElementById('root'));
