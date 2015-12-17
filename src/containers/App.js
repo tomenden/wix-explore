@@ -6,6 +6,9 @@ import CategorySelector from '../components/CategorySelector';
 import {changeCategory} from '../actions/actions';
 import {firebaseActions} from '../actions/firebase'
 import {CATEGORIES} from '../constants';
+import Sidebar from '../components/Sidebar';
+import _ from 'lodash';
+import data from '../data';
 
 
 export default class App extends Component {
@@ -13,13 +16,15 @@ export default class App extends Component {
         var props = this.props;
         return (
             <div>
-                <UserSitePopup site={props.sites[0]}/>
+                <UserSitePopup site={_.get(props.site, '0', data.sites[0])}/>
                 <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory}
                                   selected={props.filter}/>
                 <UserSitesContainer sites={props.sites} filter={props.filter}/>
+                <Sidebar/>
             </div>
         );
     }
+
     componentDidMount() {
         this.props.listenToChanges();
     }

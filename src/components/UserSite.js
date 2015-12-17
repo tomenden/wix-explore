@@ -2,11 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import '../style/main.css';
 import classNames from 'classnames';
 import _ from 'lodash';
-import InlineSVG from 'svg-inline-react';
 
 export default class UserSite extends Component {
     render() {
-        let {thumbnailUrl, description, authorUserName, views, comments = [], likes = [], id:siteId} = this.props.site;
+        let {thumbnailUrl, name, description, authorUserName, views, comments = [], likes = [], id:siteId} = this.props.site;
         let {userName, likeFunction} = this.props;
         let likeClasses = classNames({
             'liked': _.includes(likes, userName),
@@ -17,7 +16,8 @@ export default class UserSite extends Component {
                 <img className="site-thumbnail" src={thumbnailUrl} width="100%"/>
                 <img src="/src/images/userAvatar2.svg" alt="" className="user-avatar"/>
 
-                <span>By {authorUserName}</span>
+                <div className="site-name">{name}</div>
+                <div className="author">By {authorUserName}</div>
 
                 <div className="social-bar">
                     <div>

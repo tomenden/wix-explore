@@ -1,0 +1,44 @@
+@font-face {
+    font-family: Helvetica35Thin;
+    src: url(/src/style/Helvetiva35Thin.ttf)
+}
+
+.sidebar {
+    background-color: #65c888;
+    width: 450px;
+    height: 1083px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 376px 0;
+}
+
+.sidebar-body {
+    font-family: Helvetica45Light, sans-serif;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+    width: 321px;
+    height: 115px;
+    margin: 0 auto;
+}
+
+.sidebar-header {
+    font-family: Helvetica35Thin, sans-serif;
+    color:  #ffffff;
+    font-size: 40px;/* Approximation due to font substitution */
+    font-weight: 100;
+    line-height: 52px;/* Approximation due to font substitution */
+    text-align: center;
+}
+
+.divider {
+    background-color: #ffffff;
+    width: 206px;
+    height: 1px;
+    margin: 0 auto;
+}
+

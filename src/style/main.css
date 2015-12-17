@@ -1,5 +1,17 @@
+@import "sidebar.css";
+@font-face {
+    font-family: Helvetica55;
+    src: url(/src/style/Helvetiva55.ttf);
+}
+
+@font-face {
+    font-family: Helvetica45Light;
+    src: url(/src/style/Helvetiva45Light.ttf);
+}
+
 body {
-    background-color:  #eff1f2;
+    background-color: #eff1f2;
+    margin: 0;
 }
 
 .user-sites-container {
@@ -12,20 +24,38 @@ body {
 }
 
 .user-site {
-    background-color:  #ffffff;
+    background-color: #ffffff;
     box-shadow: 0 0 13px 0 rgba(41, 85, 115, 0.14);
     width: 402px;
-    height: 432px;
+    height: 445px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: sans-serif;
 }
 
+.site-name {
+    font-family: Helvetica55, sans-serif;
+    color: #20303c;
+    font-size: 14px; /* Approximation due to font substitution */
+    line-height: 24px; /* Approximation due to font substitution */
+    text-align: left;
+    transform: scaleX(1.0078); /* width and height properties ommitted due to transform */
+}
+
+.author {
+    font-family: Helvetica45Light, sans-serif;
+    color: #43515c;
+    font-size: 14px; /* Approximation due to font substitution */
+    font-weight: 300;
+    line-height: 24px; /* Approximation due to font substitution */
+    text-align: center;
+    transform: scaleX(1.0078); /* width and height properties ommitted due to transform */
+}
+
 .user-site:not(:last-child) {
     margin-bottom: 48px;
 }
-
 
 .site-thumbnail {
     width: 402px;
@@ -34,19 +64,17 @@ body {
 
 .user-avatar {
     border-radius: 50%;
-    background-color:  #d9e1e8;
+    background-color: #d9e1e8;
     width: 53px;
     height: 54px;
     text-align: center;
-    margin-top: 24px;
-    margin-bottom: 18px;
+    margin-top: 25px;
 }
 
 .like-icon {
     height: 18px;
     width: 23px;
 }
-
 
 .social-bar {
     display: flex;
@@ -56,6 +84,7 @@ body {
 .social-bar img {
     margin-right: 5px;
     margin-left: 5px;
+    vertical-align: middle;
 }
 
 .like-icon-empty {
@@ -66,8 +95,7 @@ body {
     display: none;
 }
 
-
-.liked > .like-icon-empty{
+.liked > .like-icon-empty {
     display: none;
 }
 
@@ -78,6 +106,12 @@ body {
 .social-section {
     display: inline-block;
     margin-top: 20px;
+    color: #66737c;
+    font-size: 16px; /* Approximation due to font substitution */
+    font-weight: 300;
+    line-height: 24px; /* Approximation due to font substitution */
+    text-align: left;
+    transform: scaleX(1.0078); /* width and height properties ommitted due to transform */
 }
 
 .social-section:not(:last-child) {
@@ -205,3 +239,4 @@ body{
     height: 50px;
     border: 1px solid black;
 }
+
