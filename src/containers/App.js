@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import UserSite from '../components/UserSite';
 import UserSitesContainer from '../containers/UserSitesContainer';
 import CategorySelector from '../components/CategorySelector';
-import data from '../data';
-import {changeCategory} from '../actions';
-const CATEGORIES = ['all', 'business', 'store', 'photography', 'music', 'design', 'restaurant', 'accommodation', 'events', 'portfolio', 'other'];
+import {changeCategory} from '../actions/actions';
+import {firebaseActions} from '../actions/firebase'
+import {CATEGORIES} from '../constants';
 
-let App = (props) => {
-    return (
-        <div>
-            <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory} selected={props.filter}/>
-            <UserSitesContainer sites={props.sites} filter={props.filter}/>
 
-        </div>
-    )
+export default class App extends Component {
+    render() {
+        var props = this.props;
+        return (
+            <div>
+                <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory}
+                                  selected={props.filter}/>
+                <UserSitesContainer sites={props.sites} filter={props.filter}/>
+            </div>
+        );
+    }
+    componentDidMount() {
+        this.props.listenToChanges();
+    }
 };
+
 
 function mapStateToProps(state) {
     return {
@@ -26,7 +33,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        onChangeCategory: (newCategory) => dispatch(changeCategory(newCategory))
+        onChangeCategory: (newCategory) => dispatch(changeCategory(newCategory)),
+        listenToChanges: () => dispatch(firebaseActions.listenToChanges())
     };
 }
 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import UserSite from '../components/UserSite';
 import {connect} from 'react-redux';
+import {toggleLikes} from '../actions/likes';
 
 
 let UserSitesContainer = (props) => {
@@ -10,8 +11,8 @@ let UserSitesContainer = (props) => {
             {
                 props.sites.filter((site)=> {
                     return site.category === props.filter || props.filter === 'all';
-                }).map( (site) => {
-                    return <UserSite site={site} key={site.id} />
+                }).map((site) => {
+                    return <UserSite site={site} key={site.id} userName={props.userName} likeFunction={props.likeSite}/>
                 })
             }
         </div>
@@ -20,11 +21,19 @@ let UserSitesContainer = (props) => {
 
 function mapStateToProps(state) {
     return {
-        sites: state.sites
+        sites: state.sites,
+        userName: state.userName
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        likeSite: (siteId) => dispatch(toggleLikes(siteId))
     };
 }
 
 
 export default connect(
-    mapStateToProps)
+    mapStateToProps,
+    mapDispatchToProps)
 (UserSitesContainer);
