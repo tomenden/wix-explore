@@ -125,6 +125,10 @@ body{
 .user-site-popup {
     height: 1400px;
     border: 1px solid black;
+    /*font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif ;*/
+    font-family: HelveticaNeueW01, sans-serif;
+    color: #20303c;
+
 }
 
 
@@ -134,32 +138,63 @@ body{
     background-color:  #ffffff;
     padding: 47px;
     width: 449px;
-    height: 1007px;
-    border: 1px solid black;
+    height: 1200px;
+    /*1007px;*/
+    /*border: 1px solid black;*/
     box-sizing: border-box;
+    /*font-family: HelveticaNeueW01, sans-serif;*/
+    font-size: 32px; /* Approximation due to font substitution */
+    font-weight: 300;
+    line-height: 44px; /* Approximation due to font substitution */
+    text-align: center;
+    transform: scaleY(1.0001); /* width and height properties ommitted due to transform */
 }
 .user-site-popup .author-container .author-image {
     height: 200px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+
+}
+.user-site-popup .author-container .author-image img{
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+
+}
+.user-site-popup .author-container .author-name {
+    /*border: 1px solid black;*/
+    margin-bottom: 16px;
 }
 .user-site-popup .author-container .author-more-info {
-    height: 200px;
-    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
+    transform: scaleY(1.0006);
 }
 .user-site-popup .author-container .author-message-btn {
-    height: 200px;
-    border: 1px solid black;
+    font-family: HelveticaNeue;
+    color: #ffffff;
+    font-size: 16px;
+    /*line-height: 54px;*/
+    text-align: center;
+
+    margin: 25px auto 214px;
+    border-radius: 21px;
+    background-color: #459fed;
+    width: 112px;
+    height: 42px;
 }
 .user-site-popup .author-container .author-more-sites {
     height: 200px;
-    border: 1px solid black;
-    font-family: HelveticaNeueW01,sans-serif;
-    color: #20303c;
-    font-size: 23.97px; /* Approximation due to font substitution */
+    /*border: 1px solid black;*/
+    font-size: 24px;
     font-weight: 300;
-    line-height: 36px; /* Approximation due to font substitution */
-    text-align: left;
-    transform: scaleY(1.0013); /* width and height properties ommitted due to transform */
+    line-height: 36px;
+    transform: scaleY(1.0013);
+    text-align: center;
+}
+.user-site-popup .author-container .author-more-sites img{
+    width: 354px;
+    margin-top: 16px;
 }
 
 
@@ -172,7 +207,7 @@ body{
     padding-top: 92px;
     height: 100%;
     width: 976px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     box-sizing: border-box;
 }
 .user-site-popup .site-container .site-thumbnail{
@@ -182,7 +217,7 @@ body{
     /*max-height:100%;*/
     /*width: 850px;*/
     /*margin: 92px 0 0 0;*/
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .user-site-popup .site-container .site-thumbnail img{
     width:100%;
@@ -193,7 +228,33 @@ body{
     width: 100%;
     /*width: 850px;*/
     margin-top: 32px;
-    border: 1px solid black;
+    margin-bottom: 75px;
+    /*border: 1px solid black;*/
+}
+.user-site-popup .site-container .site-social-triplet > div{
+    display: inline-block;
+    margin-right: 35px;
+}
+.user-site-popup .site-container .site-social-triplet > div > span{
+    margin-right: 5px;
+    color: #66737c;
+    font-size: 24px; /* Approximation due to font substitution */
+    font-weight: 300;
+    line-height: 24px; /* Approximation due to font substitution */
+    text-align: left;
+    transform: scaleY(1.006); /* width and height properties ommitted due to transform */
+}
+.user-site-popup .site-container .site-social-triplet img{
+    margin-right: 10px;
+    width: 31px;
+    height: 25px;
+
+}
+.user-site-popup .site-container .comments-counter{
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+    color:  #20303c;
 }
 
 
@@ -204,39 +265,111 @@ body{
     padding-right: 106px;
     height: 100%;
     /*width: 200px;*/
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     box-sizing: border-box;
 }
+.user-site-popup .extra-container .sub-header {
+    font-size: 14px; /* Approximation due to font substitution */
+    line-height: 24px; /* Approximation due to font substitution */
+    text-align: left;
+}
 .user-site-popup .extra-container .site-name {
-    height: 50px;
-    border: 1px solid black;
+    min-height: 50px;
+    /*border: 1px solid black;*/
     margin-bottom: 40px;
+
+    font-size: 48px;/* Approximation due to font substitution */
+    font-weight: 100;
+    line-height: 58px;/* Approximation due to font substitution */
+    text-align: left;
+    transform: scaleX(1.0004);/* width and height properties ommitted due to transform */
 }
 .user-site-popup .extra-container .site-description {
-    height: 50px;
-    border: 1px solid black;
-    margin-bottom: 40px;
+    min-height: 50px;
+    /*border: 1px solid black;*/
+    margin-bottom: 45px;
+
+    font-size: 16px; /* Approximation due to font substitution */
+    font-weight: 300;
+    line-height: 24px; /* Approximation due to font substitution */
+    text-align: left;
+    transform: scaleX(1.0004); /* width and height properties ommitted due to transform */
 }
 .user-site-popup .extra-container .site-category {
-    height: 50px;
-    border: 1px solid black;
-    margin-bottom: 47px;
-
+    min-height: 50px;
+    /*border: 1px solid black;*/
+    margin-bottom: 30px;
+    font-size: 14px;
+    /*line-height: 54px;*/
 }
-.user-site-popup .extra-container .site-share {
-    height: 50px;
-    border: 1px solid black;
-    margin-bottom: 40px;
-
-}
-.user-site-popup .extra-container .site-colors {
-    height: 50px;
-    border: 1px solid black;
-    margin-bottom: 54px;
-
+.user-site-popup .extra-container .site-category div {
+    display: inline-block;
+    /*height: 36px;*/
+    border-radius: 18px;
+    background-color: #ffffff;
+    /*vertical-align: middle;*/
+    padding: 10px 23px ;
+    margin-top: 15px;
 }
 .user-site-popup .extra-container .site-tags {
     height: 50px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+
+}
+.user-site-popup .extra-container .site-colors {
+    min-height: 50px;
+    /*border: 1px solid black;*/
+    margin-bottom: 54px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+
+}
+.user-site-popup .extra-container .site-colors .color-circle{
+    float: left;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin-top: 20px;
+    margin-right: 12px;
+}
+.user-site-popup .extra-container .site-colors .pink{
+    background-color: #f79a94;
+}
+.user-site-popup .extra-container .site-colors .blue{
+    background-color: #4196e0;
+}
+.user-site-popup .extra-container .site-colors .yellow{
+    background-color: #fbd102;
+}
+.user-site-popup .extra-container .site-colors .black{
+    background-color: #606264;
+}
+.user-site-popup .extra-container .site-colors .green{
+    background-color: #47a69e;
+}
+.user-site-popup .extra-container .social-share {
+    min-height: 50px;
+    /*border: 1px solid black;*/
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 44px;
+
 }
 
+/*fixme permanent*/
+.sidebar{
+    display: none;
+}
+.site-header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px #e5e5e5 solid;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+}

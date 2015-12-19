@@ -16,6 +16,7 @@ export default class App extends Component {
         var props = this.props;
         return (
             <div>
+                <div className="site-header dots-and-lines"></div>
                 <UserSitePopup site={_.get(props.site, '0', data.sites[0])}/>
                 <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory}
                                   selected={props.filter}/>
