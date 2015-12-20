@@ -17,8 +17,8 @@ let UserSitePopup = (props) => {
          * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
          */
         var disqus_config = function () {
-//          this.page.url = 'Explore'; // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = '333'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            this.page.url = 'http://localhost:3000/'; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''+props.site.id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         var d = document, s = d.createElement('script');
         s.src = '//wixgetsocial.disqus.com/embed.js';
@@ -44,16 +44,13 @@ let UserSitePopup = (props) => {
                         Message
                     </div>
                     <div className="author-more-sites">
-                        <img src={props.site.originalTemplateUrl}/>
+                        <img src={props.site.originalTemplateThumb}/>
                         Made from this template
-
                     </div>
-
                 </div>
                 <div className="site-container">
                     <div className="site-thumbnail">
                         <img src={props.site.thumbnailUrl}/>
-
                     </div>
                     <div className="site-social-triplet">
                         <div className={likeClasses} onClick={()=>props.likeFunction(props.site.id)}>
@@ -61,46 +58,38 @@ let UserSitePopup = (props) => {
                             <img src="/src/images/like-full.svg" className="like-icon like-icon-full"/>
                             {_.get(props.site.likes, 'length', 0)}
                             <span>Likes</span>
-
                         </div>
                         <div className="views-counter">
                             <img src="/src/images/views.svg"/>
                             <span>{props.site.views}</span>
                             <span>Views</span>
                         </div>
-
                     </div>
                     <div className="site-comments">
                         <div className="comments-counter">
                             <span>Comments</span>
                         </div>
-
                         <div id="disqus_thread"></div>
-
                     </div>
-
                 </div>
                 <div className="extra-container">
                     <div className="site-name">
                         {props.site.name}
-
                     </div>
                     <div className="site-description">
                         {props.site.description}
-
                     </div>
                     <div className="site-category">
-                        <span className="sub-header">Category</span>
-                        <br/>
-                        <div>
-                            {props.site.category}
-                        </div>
-
-
+                        <div className="sub-header">Category</div>
+                        <div className="white-label">{props.site.category}</div>
                     </div>
                     <div className="site-tags">
-                        <span className="sub-header">Tags</span>
-
+                        <div className="sub-header">Tags</div>
+                        {
+                            _.map(props.site.tags, function(tag){
+                                return <div className="white-label" key={tag}>{tag}</div>
+                            })
+                        }
                     </div>
 
                     <div className="site-colors">
@@ -122,6 +111,9 @@ let UserSitePopup = (props) => {
                     </div>
 
                 </div>
+
+                <a href="javascript:history.back()"><img src="/src/images/close.svg" className="close-icon"/></a>
+
 
             </div>
         );

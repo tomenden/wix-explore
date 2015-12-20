@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 export default class UserSite extends Component {
     render() {
-        let {thumbnailUrl, name, description, authorUserName, avatarUrl, views, comments = [], likes = [], id:siteId} = this.props.site;
+        let {thumbnailUrl, name, description, authorUserName, avatarUrl, views, comments = [], likes = [], id} = this.props.site;
         let {userName, likeFunction, goToSitePageFunction} = this.props;
         let likeClasses = classNames({
             'liked': _.includes(likes, userName),
@@ -33,7 +33,9 @@ export default class UserSite extends Component {
                         </div>
                         <div className="social-section">
                             <img src="/src/images/comments.svg"/>
-                            <span className="disqus-comment-count" data-disqus-identifier='333'></span>
+                            <span className="disqus-comment-count" data-disqus-identifier={id}></span>
+                            <a href={"http://localhost:3000/site/"+id+"#disqus_thread"}>.</a>
+
                         </div>
 
                     </div>
