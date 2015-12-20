@@ -13,7 +13,10 @@ let UserSitesContainer = (props) => {
                 props.sites.filter((site)=> {
                     return site.category === props.filter || props.filter === 'all';
                 }).map((site) => {
-                    return <UserSite site={site} key={site.id} userName={props.userName} likeFunction={props.likeSite} goToSitePageFunction={()=>props.goToSitePage(site.id)}/>
+                    return <UserSite site={site} key={site.id}
+                                     userName={props.userName}
+                                     likeFunction={props.likeSite}
+                                     goToSitePageFunction={()=>props.goToSitePage(site.id)}/>
                 })
             }
         </div>

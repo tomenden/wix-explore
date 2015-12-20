@@ -7,109 +7,87 @@ import classNames from 'classnames';
 
 
 let UserSitePopup = (props) => {
-    let likeClasses = classNames({
-        'liked': _.includes(_.get(props.site, 'likes', []), props.userName),
-        'likes-counter': true
-    });
+        let likeClasses = classNames({
+            'liked': _.includes(_.get(props.site, 'likes', []), props.userName),
+            'likes-counter': true
+        });
 
-    /**
-     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    var disqus_config = function () {
+        /**
+         * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+        var disqus_config = function () {
 //                 this.page.url = 'Explore'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '333'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    var d = document, s = d.createElement('script');
+            this.page.identifier = '333'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        var d = document, s = d.createElement('script');
 
-    if (props.site) {
         s.src = '//wixgetsocial.disqus.com/embed.js';
 
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
+
         return (
-            <div>
-                <div className="user-site-popup">
-                    <div className="author-container">
-                        <div className="author-image">
-                            <img src={props.site.avatarUrl}/>
+            <div className="user-site-popup">
+                <div className="author-container">
+                    <div className="author-image">
+                        <img src={props.site.avatarUrl}/>
+
+                    </div>
+                    <div className="author-name">
+                        {props.site.authorUserName}
+                    </div>
+                    <div className="author-more-info">
+                        {props.site.authorDescription}
+                    </div>
+                    <div className="author-message-btn">
+                        Message
+                    </div>
+                    <div className="author-more-sites">
+                        Made from this template
+                        <img src={props.site.originalTemplateUrl}/>
+
+                    </div>
+
+                </div>
+                <div className="site-container">
+                    <div className="site-thumbnail">
+                        <img src={props.site.thumbnailUrl}/>
+
+                    </div>
+                    <div className="site-social-triplet">
+                        <div className={likeClasses} onClick={()=>props.likeFunction(props.site.id)}>
+                            <img src="/src/images/like.svg" className="like-icon like-icon-empty"/>
+                            <img src="/src/images/like-full.svg" className="like-icon like-icon-full"/>
+                            {_.get(props.site.likes, 'length', 0)}
+                            <span>Likes</span>
 
                         </div>
-                        <div className="author-name">
-                            {props.site.authorUserName}
-                        </div>
-                        <div className="author-more-info">
-                            {props.site.authorDescription}
-                        </div>
-                        <div className="author-message-btn">
-                            Message
-                        </div>
-                        <div className="author-more-sites">
-                            Made from this template
-                            <img src={props.site.originalTemplateUrl}/>
-
+                        <div className="views-counter">
+                            <img src="/src/images/views.svg"/>
+                            <span>{props.site.views}</span>
+                            <span>Views</span>
                         </div>
 
                     </div>
-                    <div className="site-container">
-                        <div className="site-thumbnail">
-                            <img src={props.site.thumbnailUrl}/>
-
+                    <div className="site-comments">
+                        <div className="comments-counter">
+                            <span>Comments</span>
                         </div>
-                        <div className="site-social-triplet">
-                        </div>
-                        <div className="site-social-triplet">
-                            <div className={likeClasses} onClick={()=>likeFunction(siteId)}>
-                                <img src="/src/images/like.svg" className="like-icon like-icon-empty"/>
-                                <img src="/src/images/like-full.svg" className="like-icon like-icon-full"/>
-                                {_.get(props.site.likes, 'length', 0)}
-                                <span>Likes</span>
 
-                            </div>
-                            <div className="views-counter">
-                                <img src="/src/images/views.svg"/>
-                                <span>{props.site.views}</span>
-                                <span>Views</span>
-                            </div>
-
-                        </div>
-                        <div className="site-comments">
-                            <div id="disqus_thread"></div>
-                        </div>
-                        <div className="site-comments">
-                            <div className="comments-counter">
-                                <span>Comments</span>
-                            </div>
-
-                            <div id="disqus_thread"></div>
-
-                        </div>
+                        <div id="disqus_thread"></div>
 
                     </div>
-                    <div className="extra-container">
-                        <div className="site-name">
-                            {props.site.name}
 
-                        </div>
-                        <div className="site-description">
-                            {props.site.description}
+                </div>
+                <div className="extra-container">
+                    <div className="site-name">
+                        {props.site.name}
 
-                        </div>
-                        <div className="site-category">
-                            Category
-                            <br/>
-                            {props.site.category}
+                    </div>
+                    <div className="site-description">
+                        {props.site.description}
 
-                        </div>
-                        <div className="social-share">
-                            Share
-                        </div>
-                        <div className="site-colors">
-                            Colors
-                        </div>
-                        <div className="site-tags">
-                            Tags
-                        </div>
                     </div>
                     <div className="site-category">
                         <span className="sub-header">Category</span>
@@ -142,24 +120,24 @@ let UserSitePopup = (props) => {
                 </div>
 
             </div>
-        )
-    } else {
-        return (<div>loading...</div>)
+        );
     }
-};
+    ;
 //<div onClick={()=>likeFunction(siteId)} className={likeClasses}>
 
 function mapStateToProps(state, ownProps) {
     return {
         //site: state.currentSite,
         userName: state.userName,
-        site: _.findWhere(state.sites, {id: parseInt(ownProps.params.siteId)})
+        site: _.findWhere(state.sites, {id: parseInt(ownProps.params.siteId)}) || {}
 
     };
 }
 
 function mapDispatchToProps(dispatch) {
-    return {};
+    return {
+        likeFunction: (siteId) => dispatch(toggleLikes(siteId))
+    };
 }
 
 

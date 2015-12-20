@@ -9,6 +9,11 @@
     src: url(/src/style/Helvetiva45Light.ttf);
 }
 
+@font-face {
+    font-family: Helvertica35Thin;
+    src: url(/src/style/Helvetiva35Thin.ttf);
+}
+
 body {
     background-color: #eff1f2;
     margin: 0;
@@ -111,7 +116,6 @@ body {
     font-weight: 300;
     line-height: 24px; /* Approximation due to font substitution */
     text-align: left;
-    transform: scaleX(1.0078); /* width and height properties ommitted due to transform */
 }
 
 .social-section:not(:last-child) {
@@ -126,7 +130,7 @@ body{
     height: 1400px;
     border: 1px solid black;
     /*font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif ;*/
-    font-family: HelveticaNeueW01, sans-serif;
+    font-family: Helvetica35Thin, sans-serif;
     color: #20303c;
 
 }
@@ -277,6 +281,7 @@ body{
     min-height: 50px;
     /*border: 1px solid black;*/
     margin-bottom: 40px;
+    font-family: inherit;
 
     font-size: 48px;/* Approximation due to font substitution */
     font-weight: 100;

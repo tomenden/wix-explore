@@ -33,7 +33,7 @@ export default class UserSite extends Component {
                         </div>
                         <div className="social-section">
                             <img src="/src/images/comments.svg"/>
-                            <span>{_.get(comments, 'length', 0)}</span>
+                            <span className="disqus-comment-count" data-disqus-identifier='333'></span>
                         </div>
 
                     </div>
@@ -42,6 +42,10 @@ export default class UserSite extends Component {
 
             </div>
         )
+    }
+
+    componentDidMount() {
+        DISQUSWIDGETS.getCount();
     }
 }
 
