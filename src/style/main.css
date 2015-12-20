@@ -137,7 +137,7 @@ body{
 
 .user-site-popup {
     height: 1400px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     /*font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif ;*/
     font-family: Helvetica35Thin, sans-serif;
     color: #20303c;
@@ -148,6 +148,7 @@ body{
 
 .user-site-popup .author-container {
     float: left;
+    position: fixed;
     background-color:  #ffffff;
     padding: 92px 45px;
     width: 449px;
@@ -160,7 +161,6 @@ body{
     font-weight: 300;
     line-height: 44px; /* Approximation due to font substitution */
     text-align: center;
-    transform: scaleY(1.0001); /* width and height properties ommitted due to transform */
 }
 .user-site-popup .author-container .author-image {
     height: 200px;
@@ -171,6 +171,7 @@ body{
     height: 165px;
     width: 165px;
     border-radius: 50%;
+    background-color: #d9e1e8;
 
 }
 .user-site-popup .author-container .author-name {
@@ -181,7 +182,6 @@ body{
     font-size: 20px;
     font-weight: 300;
     line-height: 32px;
-    transform: scaleY(1.0006);
 }
 .user-site-popup .author-container .author-message-btn {
     /*font-family: HelveticaNeue;*/
@@ -202,7 +202,6 @@ body{
     font-size: 20px;
     font-weight: 300;
     line-height: 32px;
-    transform: scaleY(1.0013);
     text-align: center;
 }
 .user-site-popup .author-container .author-more-sites img{
@@ -215,6 +214,7 @@ body{
 .user-site-popup .site-container {
     background-color:  #eff1f2;
     float: left;
+    margin-left: 449px;
     padding-left: 84px;
     padding-right: 80px;
     padding-top: 92px;
@@ -257,7 +257,6 @@ body{
     font-weight: 300;
     line-height: 24px; /* Approximation due to font substitution */
     text-align: left;
-    transform: scaleY(1.006); /* width and height properties ommitted due to transform */
 }
 .user-site-popup .site-container .site-social-triplet img{
     margin-right: 10px;

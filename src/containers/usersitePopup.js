@@ -19,7 +19,7 @@ let UserSitePopup = (props) => {
          * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
          */
         var disqus_config = function () {
-            this.page.url = 'http://localhost:3000/'; // Replace PAGE_URL with your page's canonical URL variable
+            //this.page.url = 'http://localhost:3000/'; // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = ''+props.site.id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         var d = document, s = d.createElement('script');
@@ -33,7 +33,7 @@ let UserSitePopup = (props) => {
             <div className="user-site-popup">
                 <div className="author-container">
                     <div className="author-image">
-                        <img src={props.site.avatarUrl}/>
+                        <img src={props.site.avatarUrl || '/src/images/userAvatar2.svg'}/>
 
                     </div>
                     <div className="author-name">

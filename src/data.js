@@ -14,6 +14,7 @@ const data = {
             views: 10,
             comments: [],
             originalTemplateUrl: 'http://static.wixstatic.com/media/0afa896116374df0bb2647ae25eed07a.jpg',
+            originalTemplateThumb: 'http://static.wixstatic.com/media/0afa896116374df0bb2647ae25eed07a.jpg',
             category: 'Design'
 
         },
