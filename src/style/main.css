@@ -362,9 +362,9 @@ body{
 }
 
 /*fixme permanent*/
-.sidebar{
-    display: none;
-}
+/*.sidebar{*/
+    /*display: none;*/
+/*}*/
 .site-header {
     background: #fff;
     padding: 20px 0;
