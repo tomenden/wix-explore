@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 export default class UserSite extends Component {
     render() {
-        let {thumbnailUrl, name, description, authorUserName, views, comments = [], likes = [], id:siteId} = this.props.site;
+        let {thumbnailUrl, name, description, authorUserName, avatarUrl, views, comments = [], likes = [], id:siteId} = this.props.site;
         let {userName, likeFunction, goToSitePageFunction} = this.props;
         let likeClasses = classNames({
             'liked': _.includes(likes, userName),
@@ -14,7 +14,7 @@ export default class UserSite extends Component {
         return (
             <div className="user-site">
                 <img className="site-thumbnail" src={thumbnailUrl} width="100%" onClick={goToSitePageFunction}/>
-                <img src="/src/images/userAvatar2.svg" alt="" className="user-avatar"/>
+                <img src={avatarUrl} alt="" className="user-avatar"/>
 
                 <div className="site-name">{name}</div>
                 <div className="author">By {authorUserName}</div>
