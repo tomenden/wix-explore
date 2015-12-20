@@ -59,12 +59,10 @@ let UserSitePopup = (props) => {
                             <img src="/src/images/like.svg" className="like-icon like-icon-empty"/>
                             <img src="/src/images/like-full.svg" className="like-icon like-icon-full"/>
                             {_.get(props.site.likes, 'length', 0)}
-                            <span>Likes</span>
                         </div>
                         <div className="views-counter">
                             <img src="/src/images/views.svg"/>
                             <span>{props.site.views}</span>
-                            <span>Views</span>
                         </div>
                     </div>
                     <div className="site-comments">

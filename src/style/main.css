@@ -150,7 +150,7 @@ body{
     float: left;
     position: fixed;
     background-color:  #ffffff;
-    padding: 92px 45px;
+    padding: 90px 45px;
     width: 449px;
     height: 1200px;
     /*1007px;*/
@@ -163,12 +163,13 @@ body{
     text-align: center;
 }
 .user-site-popup .author-container .author-image {
-    height: 200px;
+    /*height: 200px;*/
     /*border: 1px solid black;*/
+    margin-bottom: 37px;
 
 }
 .user-site-popup .author-container .author-image img{
-    height: 165px;
+    /*height: 165px;*/
     width: 165px;
     border-radius: 50%;
     background-color: #d9e1e8;
@@ -176,7 +177,7 @@ body{
 }
 .user-site-popup .author-container .author-name {
     /*border: 1px solid black;*/
-    margin-bottom: 16px;
+    margin-bottom: 6px;
 }
 .user-site-popup .author-container .author-more-info {
     font-size: 20px;
@@ -184,17 +185,17 @@ body{
     line-height: 32px;
 }
 .user-site-popup .author-container .author-message-btn {
-    /*font-family: HelveticaNeue;*/
+    font-family: Helvetica45Light, sans-serif;
     color: #ffffff;
     font-size: 16px;
     /*line-height: 54px;*/
     text-align: center;
 
-    margin: 25px auto 214px;
-    border-radius: 21px;
+    margin: 20px auto 300px;
+    border-radius: 22px;
     background-color: #65c888;
     width: 112px;
-    height: 42px;
+    /*height: 42px;*/
 }
 .user-site-popup .author-container .author-more-sites {
     height: 200px;
@@ -217,7 +218,7 @@ body{
     margin-left: 449px;
     padding-left: 84px;
     padding-right: 80px;
-    padding-top: 92px;
+    padding-top: 90px;
     height: 100%;
     width: 976px;
     /*border: 1px solid black;*/
@@ -242,26 +243,32 @@ body{
     height: 25px;
     width: 100%;
     /*width: 850px;*/
-    margin-top: 32px;
+    margin-top: 27px;
     margin-bottom: 75px;
+    /*margin: 32px auto 75px;*/
     /*border: 1px solid black;*/
+    text-align: center;
 }
 .user-site-popup .site-container .site-social-triplet > div{
     display: inline-block;
-    margin-right: 35px;
+    margin-right: 20px;
+    /*margin: 32px auto 75px;*/
+
 }
 .user-site-popup .site-container .site-social-triplet > div > span{
     margin-right: 5px;
     color: #66737c;
-    font-size: 24px; /* Approximation due to font substitution */
+    font-size: 20px; /* Approximation due to font substitution */
     font-weight: 300;
     line-height: 24px; /* Approximation due to font substitution */
     text-align: left;
+    vertical-align: top;
 }
 .user-site-popup .site-container .site-social-triplet img{
-    margin-right: 10px;
-    width: 31px;
-    height: 25px;
+    /*margin-top: 3px;*/
+    margin-right: 3px;
+    width: 34px;
+    height: 20px;
 
 }
 .user-site-popup .site-container .comments-counter{
@@ -281,14 +288,17 @@ body{
     box-sizing: border-box;
 }
 .user-site-popup .extra-container .sub-header {
+    font-family: Helvetica65Medium, sans-serif;
     font-size: 14px;
     line-height: 24px;
+    font-weight: 500;
     text-align: left;
+    margin-bottom: 9px;
 }
 .user-site-popup .extra-container .site-name {
     min-height: 50px;
-    margin-bottom: 40px;
-    font-family: inherit;
+    margin-bottom: 20px;
+    font-family: Helvetica35thin, sans-serif;
 
     font-size: 48px;
     font-weight: 100;
@@ -297,7 +307,7 @@ body{
 }
 .user-site-popup .extra-container .site-description {
     min-height: 50px;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 
     font-size: 16px;
     font-weight: 300;
@@ -306,7 +316,7 @@ body{
 }
 .user-site-popup .extra-container .site-category {
     min-height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     font-size: 14px;
     /*line-height: 54px;*/
 }
@@ -317,7 +327,7 @@ body{
     background-color: #ffffff;
 
     padding: 10px 23px ;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     margin-right: 12px;
     font-family: Helvetica45Light, sans-serif;
     color: #20303c;
@@ -332,13 +342,13 @@ body{
 
 .user-site-popup .extra-container .site-tags {
     min-height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 14px;
     /*line-height: 54px;*/
 }
 .user-site-popup .extra-container .site-colors {
     min-height: 50px;
-    margin-bottom: 54px;
+    margin-bottom: 43px;
     font-size: 32px;
     font-weight: 300;
     line-height: 44px;
@@ -349,7 +359,7 @@ body{
     border-radius: 50%;
     width: 36px;
     height: 36px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-right: 12px;
 }
 .user-site-popup .extra-container .site-colors .pink{
@@ -380,7 +390,8 @@ body{
     float: left;
     height: 62px;
     width: 62px;
-    margin-top: 23px;
+    /*margin-top: 23px;*/
+    margin-top: 5px;
     margin-right: 21px;
 }
 .user-site-popup .extra-container .social-share .Facebook {
