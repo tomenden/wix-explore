@@ -24,7 +24,7 @@ export default class App extends Component {
         );
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.listenToChanges();
     }
 };
