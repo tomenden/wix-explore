@@ -114,9 +114,9 @@ let UserSitePopup = (props) => {
                     </div>
                     <div className="social-share">
                         <div className="sub-header">Share It</div>
-                        <div className="socicon google"></div>
                         <div className="socicon Facebook"></div>
                         <div className="socicon Twitter"></div>
+                        <div className="socicon google"></div>
                         <div className="socicon Pin"></div>
 
                     </div>

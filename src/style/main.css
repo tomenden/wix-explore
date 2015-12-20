@@ -373,12 +373,6 @@ body{
     margin-top: 23px;
     margin-right: 23px;
 }
-.user-site-popup .extra-container .social-share .google {
-    background-image: url('/src/images/Google.svg');
-}
-.user-site-popup .extra-container .social-share .google:hover {
-    background-image: url('/src/images/Google selected.svg');
-}
 .user-site-popup .extra-container .social-share .Facebook {
     background-image: url('/src/images/Facebook.svg');
 }
@@ -390,6 +384,12 @@ body{
 }
 .user-site-popup .extra-container .social-share .Twitter:hover {
     background-image: url('/src/images/Twitter selected.svg');
+}
+.user-site-popup .extra-container .social-share .google {
+    background-image: url('/src/images/Google.svg');
+}
+.user-site-popup .extra-container .social-share .google:hover {
+    background-image: url('/src/images/Google selected.svg');
 }
 .user-site-popup .extra-container .social-share .Pin {
     background-image: url('/src/images/Pin.svg');
