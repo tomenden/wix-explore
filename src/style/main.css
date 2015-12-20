@@ -366,6 +366,11 @@ body{
     line-height: 44px;
 
 }
+.user-site-popup .extra-container .social-share img {
+    height: 60px;
+    margin-top: 23px;
+    margin-right: 7px;
+}
 
 /*fixme permanent*/
 /*.sidebar{*/
