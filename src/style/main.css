@@ -235,8 +235,16 @@ body{
     /*margin: 92px 0 0 0;*/
     /*border: 1px solid black;*/
 }
-.user-site-popup .site-container .site-thumbnail img{
+.user-site-popup .site-container .site-thumbnail .site-image{
     width:100%;
+    /*height:100%;*/
+}
+.user-site-popup .site-container .site-thumbnail .link-image{
+    width: 70px;
+    position: relative;
+    left: 742px;
+    bottom: 70px;
+    background-color: white;
     /*height:100%;*/
 }
 .user-site-popup .site-container .site-social-triplet{

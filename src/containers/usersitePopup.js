@@ -52,7 +52,8 @@ let UserSitePopup = (props) => {
                 </div>
                 <div className="site-container">
                     <div className="site-thumbnail">
-                        <img src={props.site.thumbnailUrl}/>
+                        <img className="site-image" src={props.site.thumbnailUrl}/>
+                        <a target="_blank" href={props.site.url}><img className="link-image" src="/src/images/link-15.svg"/></a>
                     </div>
                     <div className="site-social-triplet">
                         <div className={likeClasses} onClick={()=>props.likeFunction(props.site.id)}>
@@ -67,7 +68,6 @@ let UserSitePopup = (props) => {
                     </div>
                     <div className="site-comments">
                         <div className="comments-counter">
-                            <span>Comments</span>
                         </div>
                         <div id="disqus_thread"></div>
                     </div>
