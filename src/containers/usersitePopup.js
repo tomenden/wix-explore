@@ -44,8 +44,8 @@ let UserSitePopup = (props) => {
                         Message
                     </div>
                     <div className="author-more-sites">
-                        Made from this template
                         <img src={props.site.originalTemplateUrl}/>
+                        Made from this template
 
                     </div>
 
