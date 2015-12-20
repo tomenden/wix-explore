@@ -10,6 +10,7 @@ const data = {
             authorDescription: 'Las Vegas, Nevada',
             avatarUrl: 'https://lh3.googleusercontent.com/-cTI_uaKUWCA/AAAAAAAAAAI/AAAAAAAAAAA/pogz1BqguqY/photo.jpg',
             likes: ['tzabarco', 'tome'],
+            tags: ['Event', 'Style', 'Wedding'],
             views: 10,
             comments: [],
             originalTemplateUrl: 'http://static.wixstatic.com/media/0afa896116374df0bb2647ae25eed07a.jpg',
