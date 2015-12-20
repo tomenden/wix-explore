@@ -184,6 +184,10 @@ body{
     font-weight: 300;
     line-height: 32px;
 }
+.user-site-popup .author-container a {
+    color: inherit;
+    text-decoration: none;
+}
 .user-site-popup .author-container .author-message-btn {
     font-family: Helvetica45Light, sans-serif;
     color: #ffffff;
@@ -245,6 +249,7 @@ body{
     left: 742px;
     bottom: 70px;
     background-color: white;
+    box-shadow: -2px 0px 13px 0px rgba(102, 115, 124, 0.1);
     /*height:100%;*/
 }
 .user-site-popup .site-container .site-social-triplet{
@@ -401,6 +406,7 @@ body{
     /*margin-top: 23px;*/
     margin-top: 5px;
     margin-right: 21px;
+    background-repeat: no-repeat;
 }
 .user-site-popup .extra-container .social-share .Facebook {
     background-image: url('/src/images/Facebook.svg');

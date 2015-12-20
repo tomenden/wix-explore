@@ -42,9 +42,9 @@ let UserSitePopup = (props) => {
                     <div className="author-more-info">
                         {props.site.authorDescription}
                     </div>
-                    <div className="author-message-btn">
+                    <a target="_blank" href="mailto:tzabarc@wix.com"><div className="author-message-btn">
                         Message
-                    </div>
+                    </div></a>
                     <div className="author-more-sites">
                         <img src={props.site.originalTemplateThumb}/>
                         Made from this template
