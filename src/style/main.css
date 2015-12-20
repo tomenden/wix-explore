@@ -1,4 +1,6 @@
 @import "sidebar.css";
+@import "filter.css";
+
 @font-face {
     font-family: Helvetica55;
     src: url(/src/style/Helvetiva55.ttf);
@@ -26,6 +28,8 @@ body {
     width: 70%;
     margin-right: 84px;
     margin-left: auto;
+    position: relative;
+    top: 164px;
 }
 
 .user-site {
@@ -307,17 +311,26 @@ body{
     font-size: 14px;
     /*line-height: 54px;*/
 }
-.user-site-popup .extra-container .white-label {
+.white-label {
     display: inline-block;
     /*height: 36px;*/
     border-radius: 18px;
     background-color: #ffffff;
-    font-size: 14px;
 
     padding: 10px 23px ;
     margin-top: 15px;
     margin-right: 12px;
+    font-family: Helvetica45Light, sans-serif;
+    color: #20303c;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
 }
+
+.white-label.font-16 {
+    font-size: 16px;
+}
+
 .user-site-popup .extra-container .site-tags {
     min-height: 50px;
     margin-bottom: 30px;

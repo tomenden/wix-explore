@@ -4,6 +4,8 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import {toggleLikes} from '../actions/likes';
 import classNames from 'classnames';
+import { pushPath } from 'redux-simple-router'
+
 
 
 let UserSitePopup = (props) => {
@@ -112,7 +114,7 @@ let UserSitePopup = (props) => {
 
                 </div>
 
-                <a href="javascript:history.back()"><img src="/src/images/close.svg" className="close-icon"/></a>
+                <a onClick={props.backToHome}><img src="/src/images/close.svg" className="close-icon"/></a>
 
 
             </div>
@@ -130,7 +132,8 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        likeFunction: (siteId) => dispatch(toggleLikes(siteId))
+        likeFunction: (siteId) => dispatch(toggleLikes(siteId)),
+        backToHome: () => dispatch(pushPath('/'))
     };
 }
 

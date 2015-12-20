@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import UserSitesContainer from '../containers/UserSitesContainer';
 import UserSitePopup from '../containers/UserSitePopup';
-import CategorySelector from '../components/CategorySelector';
+import FilterContainer from '../containers/FilterContainer';
 import {changeCategory} from '../actions/actions';
 import {firebaseActions} from '../actions/firebase'
 import {CATEGORIES, history} from '../constants';

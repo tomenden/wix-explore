@@ -4,7 +4,7 @@ import {changeCategory, toggleSidebarVisibility} from '../../actions/actions';
 import {CATEGORIES} from '../../constants';
 import UserSitesContainer from '../UserSitesContainer';
 import Sidebar from '../../components/Sidebar';
-import CategorySelector from '../../components/CategorySelector';
+import FilterContainer from '../../containers/FilterContainer';
 import {firebaseActions} from '../../actions/firebase';
 
 
@@ -15,8 +15,8 @@ export default class HomePage extends Component {
             <div>
                 <UserSitesContainer sites={props.sites} filter={props.filter}/>
                 <Sidebar visibility={props.isSidebarVisible} changeVisibilityFunction={props.changeSidebarVisibility}/>
-                <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory}
-                                  selected={props.filter}/>
+                <FilterContainer categories={CATEGORIES} onChangeCategory={props.onChangeCategory}
+                                 selected={props.filter}/>
             </div>
         );
     }
