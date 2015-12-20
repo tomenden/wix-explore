@@ -3,6 +3,7 @@ import _ from 'lodash';
 import UserSite from '../components/UserSite';
 import {connect} from 'react-redux';
 import {toggleLikes} from '../actions/likes';
+import { pushPath } from 'redux-simple-router'
 
 
 let UserSitesContainer = (props) => {
@@ -12,7 +13,7 @@ let UserSitesContainer = (props) => {
                 props.sites.filter((site)=> {
                     return site.category === props.filter || props.filter === 'all';
                 }).map((site) => {
-                    return <UserSite site={site} key={site.id} userName={props.userName} likeFunction={props.likeSite}/>
+                    return <UserSite site={site} key={site.id} userName={props.userName} likeFunction={props.likeSite} goToSitePageFunction={()=>props.goToSitePage(site.id)}/>
                 })
             }
         </div>
@@ -28,7 +29,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        likeSite: (siteId) => dispatch(toggleLikes(siteId))
+        likeSite: (siteId) => dispatch(toggleLikes(siteId)),
+        goToSitePage: (siteId) => {
+            dispatch(pushPath('/site/' + siteId))
+        }
     };
 }
 

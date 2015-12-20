@@ -5,48 +5,38 @@ import UserSitePopup from '../containers/UserSitePopup';
 import CategorySelector from '../components/CategorySelector';
 import {changeCategory} from '../actions/actions';
 import {firebaseActions} from '../actions/firebase'
-import {CATEGORIES} from '../constants';
+import {CATEGORIES, history} from '../constants';
 import Sidebar from '../components/Sidebar';
 import _ from 'lodash';
 import data from '../data';
+import {Router, Route} from 'react-router';
+import HomePage from './pages/HomePage';
 
 
 export default class App extends Component {
     render() {
-        var props = this.props;
+        //var props = this.props;
         return (
-            <div>
-                <UserSitePopup site={_.get(props.site, '0', data.sites[0])}/>
-                <CategorySelector categories={CATEGORIES} onChangeCategory={props.onChangeCategory}
-                                  selected={props.filter}/>
-                <UserSitesContainer sites={props.sites} filter={props.filter}/>
-                <Sidebar/>
-            </div>
+            <Router history={history}>
+                <Route path="/" component={HomePage}></Route>
+                <Route path="/site/:siteId" component={UserSitePopup}></Route>
+            </Router>
         );
     }
 
-    componentDidMount() {
+    componentDidMount(){
         this.props.listenToChanges();
     }
 };
 
-
-function mapStateToProps(state) {
-    return {
-        sites: state.sites,
-        filter: state.filter
-    };
-}
-
 function mapDispatchToProps(dispatch) {
     return {
-        onChangeCategory: (newCategory) => dispatch(changeCategory(newCategory)),
         listenToChanges: () => dispatch(firebaseActions.listenToChanges())
+
     };
 }
 
-
 export default connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps
 )(App);

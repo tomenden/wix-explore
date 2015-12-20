@@ -6,14 +6,14 @@ import _ from 'lodash';
 export default class UserSite extends Component {
     render() {
         let {thumbnailUrl, name, description, authorUserName, views, comments = [], likes = [], id:siteId} = this.props.site;
-        let {userName, likeFunction} = this.props;
+        let {userName, likeFunction, goToSitePageFunction} = this.props;
         let likeClasses = classNames({
             'liked': _.includes(likes, userName),
             'social-section': true
         });
         return (
             <div className="user-site">
-                <img className="site-thumbnail" src={thumbnailUrl} width="100%"/>
+                <img className="site-thumbnail" src={thumbnailUrl} width="100%" onClick={goToSitePageFunction}/>
                 <img src="/src/images/userAvatar2.svg" alt="" className="user-avatar"/>
 
                 <div className="site-name">{name}</div>

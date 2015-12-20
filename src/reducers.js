@@ -1,8 +1,8 @@
-import {CHANGE_CATEGORY, UPDATE_SITES_LIST} from './actions/actions';
-import {SET_FIREBASE_REF} from './actions/firebase'
+import {CHANGE_CATEGORY, UPDATE_SITES_LIST, TOGGLE_SIDEBAR_VISIBILITY} from './actions/actions';
+import {SET_FIREBASE_REF} from './actions/firebase';
+import {routeReducer} from 'redux-simple-router';
 import {combineReducers} from 'redux';
 //import data from './data';
-
 
 let sites = (state = [], action) => {
     switch (action.type) {
@@ -38,10 +38,21 @@ let firebaseRef = (state = null, action) => {
     }
 };
 
+let sidebarVisibility = (state = true, action) => {
+    switch (action.type) {
+        case TOGGLE_SIDEBAR_VISIBILITY:
+            return action.value;
+        default:
+            return state;
+    }
+};
+
 export const rootReducer = combineReducers({
         sites,
         filter,
         userName,
-        firebaseRef
+        firebaseRef,
+        sidebarVisibility,
+        routing: routeReducer
     }
 );
