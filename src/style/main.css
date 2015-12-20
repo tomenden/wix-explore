@@ -366,10 +366,36 @@ body{
     line-height: 44px;
 
 }
-.user-site-popup .extra-container .social-share img {
-    height: 60px;
+.user-site-popup .extra-container .social-share .socicon {
+    float: left;
+    height: 59px;
+    width: 60px;
     margin-top: 23px;
-    margin-right: 7px;
+    margin-right: 23px;
+}
+.user-site-popup .extra-container .social-share .google {
+    background-image: url('/src/images/Google.svg');
+}
+.user-site-popup .extra-container .social-share .google:hover {
+    background-image: url('/src/images/Google selected.svg');
+}
+.user-site-popup .extra-container .social-share .Facebook {
+    background-image: url('/src/images/Facebook.svg');
+}
+.user-site-popup .extra-container .social-share .Facebook:hover {
+    background-image: url('/src/images/Facebook selected.svg');
+}
+.user-site-popup .extra-container .social-share .Twitter {
+    background-image: url('/src/images/Twitter.svg');
+}
+.user-site-popup .extra-container .social-share .Twitter:hover {
+    background-image: url('/src/images/Twitter selected.svg');
+}
+.user-site-popup .extra-container .social-share .Pin {
+    background-image: url('/src/images/Pin.svg');
+}
+.user-site-popup .extra-container .social-share .Pin:hover {
+    background-image: url('/src/images/Pin selected.svg');
 }
 
 /*fixme permanent*/
