@@ -14,7 +14,7 @@ export default class UserSite extends Component {
         return (
             <div className="user-site">
                 <img className="site-thumbnail" src={thumbnailUrl} width="100%" onClick={goToSitePageFunction}/>
-                <img src={avatarUrl} alt="" className="user-avatar"/>
+                <img src={avatarUrl || '/src/images/userAvatar2.svg'} alt="" className="user-avatar"/>
 
                 <div className="site-name">{name}</div>
                 <div className="author">By {authorUserName}</div>
@@ -33,8 +33,8 @@ export default class UserSite extends Component {
                         </div>
                         <div className="social-section">
                             <img src="/src/images/comments.svg"/>
-                            <span className="disqus-comment-count" data-disqus-identifier={id}></span>
-                            <a href={"http://localhost:3000/site/"+id+"#disqus_thread"}>.</a>
+                            <span className="disqus-comment-count" data-disqus-identifier={id}/>
+                            <a href={"http://localhost:3000/site/"+id+"#disqus_thread"}>{Math.floor((Math.random() * 5))}</a>
 
                         </div>
 
