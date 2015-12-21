@@ -4,6 +4,8 @@
   "description": "hackathon project",
   "scripts": {
     "start": "node server.js",
+    "generate-gitbook": "gitbook build ./content ./gh-pages",
+    "deploy-gitbook": "node ./scripts/deploy-gh-pages.js",
     "lint": "eslint src"
   },
   "repository": {
@@ -53,6 +55,10 @@
     "redux": "^3.0.5",
     "redux-simple-router": "^1.0.1",
     "redux-thunk": "^1.0.2",
-    "svg-inline-react": "^0.3.1"
+    "svg-inline-react": "^0.3.1",
+    "async": "^0.9.0",
+    "fs-extra": "^0.18.2",
+    "gh-pages": "^0.2.0",
+    "gitbook-cli": "^0.3.3"
   }
 }
