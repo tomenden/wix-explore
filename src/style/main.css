@@ -61,19 +61,15 @@ ul.categories-open {
 .user-site {
     background-color: #ffffff;
     box-shadow: 0 0 13px 0 rgba(41, 85, 115, 0.14);
-    /*width: 402px;*/
     height: 445px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: sans-serif;
+    text-align: center;
 }
 
 .site-name {
     font-family: Helvetica55, sans-serif;
     color: #20303c;
     font-size: 14px; /* Approximation due to font substitution */
-    text-align: left;
     margin-bottom: 10px;
     transform: scaleX(1.0078); /* width and height properties ommitted due to transform */
 }
@@ -93,6 +89,7 @@ ul.categories-open {
 }
 
 .site-thumbnail {
+    display: block;
     width: 402px;
     height: 258px;
     border-bottom: 1px solid #eff1f2;
@@ -113,8 +110,8 @@ ul.categories-open {
 }
 
 .social-bar {
-    display: flex;
-    flex-direction: row;
+    display: block;
+
 }
 
 .social-bar img {
