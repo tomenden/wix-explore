@@ -12,7 +12,7 @@ export default class HomePage extends Component {
     render() {
         var props = this.props;
         return (
-            <div>
+            <div className="home-page-container">
                 <UserSitesContainer sites={props.sites} filter={props.filter}/>
                 <Sidebar visibility={props.isSidebarVisible} changeVisibilityFunction={props.changeSidebarVisibility}/>
                 <FilterContainer categories={CATEGORIES} onChangeCategory={props.onChangeCategory}

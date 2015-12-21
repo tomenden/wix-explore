@@ -16,20 +16,38 @@
     src: url(/src/style/Helvetiva35Thin.ttf);
 }
 
+@font-face {
+    font-family: Helvetica25;
+    src: url(/src/style/Helvetica25.ttf)
+}
+
 body {
     background-color: #eff1f2;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.home-page-container {
+    width: 70%;
+    position: relative;
+    /*right: 0;*/
+    top: 0;
+    /*margin-left: auto;*/
+    /*margin-right: 0;*/
+    left: 450px;
 }
 
 .user-sites-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 70%;
+    justify-content: space-between;
+    width: 100%;
+    /*margin-right: 84px;*/
+    margin-left: 84px;
     margin-right: 84px;
-    margin-left: auto;
-    position: relative;
+    position: absolute;
     top: 164px;
+    left: 0;
 }
 
 .user-site {

@@ -21,7 +21,7 @@ export default class UserSite extends Component {
 
                 <div className="social-bar">
                     <div>
-                        <div onClick={()=>likeFunction(siteId)} className={likeClasses}>
+                        <div onClick={()=>likeFunction(id)} className={likeClasses}>
                             <img src="/src/images/like.svg" className="like-icon like-icon-empty"/>
                             <img src="/src/images/like-full.svg" className="like-icon like-icon-full"/>
                             {_.get(likes, 'length', 0)}

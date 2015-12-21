@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 export default class TopStripDisplay extends Component {
     render() {
-        let {items, selected, filterFunc} = this.props;
+        let {items, selected, filterFunc, closeFunc} = this.props;
         return (
             <ul className="top-strip-display">
                 {
@@ -21,6 +21,10 @@ export default class TopStripDisplay extends Component {
                                 onClick={()=>filterFunc(item)}
                             >
                                 {item}
+                                {
+                                    item === selected ?
+                                        <img className="x-button" src="/src/images/x.png" onClick={closeFunc}></img> : ''
+                                }
                             </li>
                         );
                     })

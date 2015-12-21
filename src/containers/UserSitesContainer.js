@@ -7,12 +7,14 @@ import { pushPath } from 'redux-simple-router'
 
 
 let UserSitesContainer = (props) => {
+    var sitesAfterFilterBeforeSort = _(props.sites).filter((site)=> {
+        return site.category === props.filter || props.filter === 'All';
+    }).value();
+
     return (
         <div className="user-sites-container">
             {
-                props.sites.filter((site)=> {
-                    return site.category === props.filter || props.filter === 'All';
-                }).map((site) => {
+                sortByFilter(sitesAfterFilterBeforeSort, props.sortFilter).map((site) => {
                     return <UserSite site={site} key={site.id}
                                      userName={props.userName}
                                      likeFunction={props.likeSite}
@@ -23,10 +25,31 @@ let UserSitesContainer = (props) => {
     );
 };
 
+
+function sortByFilter(sites, filter) {
+    switch (filter) {
+        case 'Most Popular':
+            return _(sites).sortBy(function (site) {
+                return _.get(site, 'likes.length', 0);
+            }).reverse().value();
+        default:
+            return sites;
+    }
+
+}
+
+//function sortByMostPopular(sites) {
+//    return _(sites).sortBy(function (site) {
+//        return _.get(site, 'likes.length', 0);
+//    }).reverse().value();
+//}
+
+
 function mapStateToProps(state) {
     return {
         sites: state.sites,
-        userName: state.userName
+        userName: state.userName,
+        sortFilter: state.sortFilter
     };
 }
 

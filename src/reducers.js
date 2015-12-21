@@ -1,4 +1,4 @@
-import {CHANGE_CATEGORY, UPDATE_SITES_LIST, TOGGLE_SIDEBAR_VISIBILITY, TOP_STRIP_DISPLAY} from './actions/actions';
+import {CHANGE_CATEGORY, UPDATE_SITES_LIST, TOGGLE_SIDEBAR_VISIBILITY, TOP_STRIP_DISPLAY, UPDATE_SORT_FILTER} from './actions/actions';
 import {SET_FIREBASE_REF} from './actions/firebase';
 import {routeReducer} from 'redux-simple-router';
 import {combineReducers} from 'redux';
@@ -56,6 +56,15 @@ let topStripDisplay = (state = "CLOSED", action) => {
     }
 };
 
+let sortFilter = (state = 'Most Popular', action) => {
+    switch (action.type) {
+        case UPDATE_SORT_FILTER:
+            return action.value;
+        default:
+            return state;
+    }
+};
+
 export const rootReducer = combineReducers({
         sites,
         filter,
@@ -63,6 +72,7 @@ export const rootReducer = combineReducers({
         firebaseRef,
         sidebarVisibility,
         topStripDisplay,
+        sortFilter,
         routing: routeReducer
     }
 );

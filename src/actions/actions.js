@@ -4,6 +4,7 @@ export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
 export const UPDATE_SITES_LIST = 'UPDATE_SITES_LIST';
 export const TOGGLE_SIDEBAR_VISIBILITY = 'TOGGLE_SIDEBAR_VISIBILITY';
 export const TOP_STRIP_DISPLAY = 'TOP_STRIP_DISPLAY';
+export const UPDATE_SORT_FILTER = 'UPDATE_SORT_FILTER';
 
 export function changeCategory(newCategory) {
     return {
@@ -30,5 +31,12 @@ export function updateTopStripDisplay(stripToDisplay) {
     return {
         type: TOP_STRIP_DISPLAY,
         value: stripToDisplay
+    };
+}
+
+export function updateSortFilter(sortBy) {
+    return {
+        type: UPDATE_SORT_FILTER,
+        value: sortBy
     };
 }

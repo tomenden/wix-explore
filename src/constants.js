@@ -11,10 +11,9 @@ export const CATEGORIES = ['All', 'Business', 'Store', 'Photography', 'Music', '
 export const FILTERS = {
     CATEGORIES: {
         items: [
-            'All', 'Business', 'Store',
+            'All', 'Business', 'Online Store',
             'Photography', 'Music', 'Design',
-            'Restaurant', 'Accommodation', 'Events',
-            'Portfolio', 'Other'
+            'Restaurant', 'Accommodation', 'Events'
         ],
         label: 'Category',
         topStripDisplayName: 'CATEGORIES'

@@ -6,13 +6,18 @@
 .sidebar {
     background-color: #65c888;
     width: 450px;
-    height: 1083px;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     text-align: center;
-    padding: 376px 0;
+    /*padding: 376px 0;*/
     transition: transform 1s;
+}
+
+.sidebar-content {
+    margin-top: 300px;
+    text-align: center;
 }
 
 .sidebar-body {
@@ -24,16 +29,16 @@
     text-align: center;
     width: 321px;
     height: 115px;
-    margin: 0 auto;
+    margin: 44px auto;
 }
 
 .sidebar-header {
-    font-family: Helvetica35Thin, sans-serif;
+    font-family: Helvetica25, sans-serif;
     color: #ffffff;
-    font-size: 40px; /* Approximation due to font substitution */
-    font-weight: 100;
-    line-height: 52px; /* Approximation due to font substitution */
-    text-align: center;
+    font-size: 40px;
+    /*margin: 0;*/
+    /*margin: 16px 0;*/
+    margin-bottom: 16px;
 }
 
 .divider {
