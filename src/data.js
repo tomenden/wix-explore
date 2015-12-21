@@ -6,6 +6,7 @@ const data = {
             description: "Unique event and wedding designing. Working on every details and creating a truly special reflection the couple's love story through both design and impeccable styling aesthetic.",
             url: 'http://contact8568.wix.com/ingrid/',
             thumbnailUrl: 'https://static.wixstatic.com/media/85a3c2_555a5ce71bb04161b7262b112087b8bc.jpg/v1/fit/w_600,h_336,q_90/85a3c2_555a5ce71bb04161b7262b112087b8bc.jpg',
+            thumbnailUrlSmall: 'https://static.wixstatic.com/media/85a3c2_555a5ce71bb04161b7262b112087b8bc.jpg/v1/fit/w_600,h_336,q_90/85a3c2_555a5ce71bb04161b7262b112087b8bc.jpg',
             authorUserName: 'Audrey Wagner King',
             authorDescription: 'Las Vegas, Nevada',
             avatarUrl: 'https://lh3.googleusercontent.com/-cTI_uaKUWCA/AAAAAAAAAAI/AAAAAAAAAAA/pogz1BqguqY/photo.jpg',
