@@ -219,6 +219,19 @@ body{
     width: 112px;
     /*height: 42px;*/
 }
+.user-site-popup .author-container .author-message-btn:hover {
+    font-family: Helvetica45Light, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    /*line-height: 54px;*/
+    text-align: center;
+
+    margin: 20px auto 300px;
+    border-radius: 22px;
+    background-color: #84d3a0;
+    width: 112px;
+    /*height: 42px;*/
+}
 .user-site-popup .author-container .author-more-sites {
     height: 200px;
     box-shadow: 0 0 13px 0 rgba(41, 85, 115, 0.14);
@@ -230,6 +243,24 @@ body{
 .user-site-popup .author-container .author-more-sites img{
     width: 360px;
     margin-bottom: 16px;
+}
+.user-site-popup .author-container .author-more-sites:hover .template-hover{
+    background-color:  rgba(32, 48, 60, 0.5);
+    width: 360px;
+    height: 208px;
+    position: relative;
+    bottom: 257px;
+    color:  #ffffff;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 208px;
+    text-align: center;
+    vertical-align: middle;
+    visibility: visible;
+    font-family: Helvetica45Thin, sans-serif;
+}
+.user-site-popup .author-container .author-more-sites .template-hover{
+    visibility: hidden;
 }
 
 
@@ -359,6 +390,7 @@ body{
 
     padding: 10px 23px ;
     /*margin-top: 15px;*/
+    margin-bottom: 18px;
     margin-right: 12px;
     font-family: Helvetica45Light, sans-serif;
     color: #20303c;
@@ -454,6 +486,13 @@ body{
     position: absolute;
     top: 44px;
     right: 57px;
+    background-image: url('/src/images/x.svg');
+    height: 25px;
+    width: 25px;
+
+}
+.user-site-popup .close-icon:hover {
+    background-image: url('/src/images/x-selected.svg');
 }
 
 /*fixme permanent*/

@@ -45,10 +45,13 @@ let UserSitePopup = (props) => {
                     <a target="_blank" href="mailto:tzabarc@wix.com"><div className="author-message-btn">
                         Message
                     </div></a>
-                    <div className="author-more-sites">
-                        <img src={props.site.originalTemplateThumb}/>
-                        Made from this template
-                    </div>
+                    <a target="_blank" href={props.site.originalTemplateUrl}>
+                        <div className="author-more-sites">
+                            <img src={props.site.originalTemplateThumb}/>
+                            Made from this template
+                            <div className="template-hover">Try Me</div>
+                        </div>
+                    </a>
                 </div>
                 <div className="site-container">
                     <div className="site-thumbnail">
@@ -112,7 +115,7 @@ let UserSitePopup = (props) => {
 
                 </div>
 
-                <a onClick={props.backToHome}><img src="/src/images/close.svg" className="close-icon"/></a>
+                <div onClick={props.backToHome} className="close-icon"></div>
 
 
             </div>
