@@ -1,0 +1,78 @@
+.submit{
+    padding: 115px 61px;
+    font-family: Helvetica45Light, sans-serif;
+    color: #20303c;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    text-align: left;
+    width: 450px;
+    border-right: 1px solid black;
+}
+
+.submit form{
+    margin: 0;
+}
+.submit input{
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    border: hidden;
+
+}
+.submit .separator{
+    border-width: 1px;
+    border-color:  #e0e3e5;
+    border-style: solid;
+    background-color:  #66737c;
+    width: 295px;
+    height: 1px;
+    margin: 10px 0;
+}
+.submit .upload-photo{
+    border-radius: 50%;
+    background-color: #d9e1e8;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.submit .upload-text{
+    /*float: left;*/
+    display: inline-block;
+
+}
+.submit .upload-text-1{
+    font-size: 16px;
+}
+.submit .upload-text-2{
+    font-size: 14px;
+    color:  #66737c;
+    font-weight: 300;
+    line-height: 24px;
+}
+.submit .submit-button{
+    border-radius: 21px;
+    background-color: #65c888;
+    width: 120px;
+    height: 42px;
+    color:  #ffffff;
+    font-size: 16px;
+    line-height: 42px;
+    text-align: center;
+    vertical-align: middle;
+    margin:0 auto;
+
+}
+.submit .submit-terms{
+    color:  #66737c;
+    font-size: 14px;/* Approximation due to font substitution */
+    line-height: 54px;/* Approximation due to font substitution */
+    text-align: center;
+
+}
+.submit .submit-terms span{
+    color:  #65c888;
+
+}
