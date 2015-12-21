@@ -4,14 +4,27 @@ import {connect} from 'react-redux';
 import {updateTopStripDisplay, updateSortFilter} from '../actions/actions';
 import TopStripDisplay from '../components/TopStripDisplay';
 import {CATEGORIES, FILTERS} from '../constants';
+import classNames from 'classnames';
 
 
 export default class FilterContainer extends Component {
     render() {
-        let {onChangeCategory, selected, displayInTopStrip, updateTopStripDisplay, updateSortFilter} = this.props;
+        let {onChangeCategory, selected, selectedSortFilter, displayInTopStrip, updateTopStripDisplay, updateSortFilter} = this.props;
         var getClosedStrip = function () {
             return (
                 <div className="top-strip-display">
+                    <div className="sort-buttons-container">
+                        {
+                            _.map(['Recent', 'Featured', 'Most Popular'], function (sortBy, index) {
+                                return <div className={classNames({
+                                    "white-label": true,
+                                    "font-16":true,
+                                    "selected": sortBy === selectedSortFilter
+                                })} key={sortBy + index}
+                                            onClick={()=> updateSortFilter(sortBy)}>{sortBy}</div>;
+                            })
+                        }
+                    </div>
                     <div className="filter-container">
 
                         {
@@ -32,22 +45,21 @@ export default class FilterContainer extends Component {
                         }
 
                     </div>
-                    <div className="sort-buttons-container">
-                        {
-                            _.map(['Recent', 'Featured', 'Most Popular'], function (sortBy, index) {
-                                return <div className="white-label font-16" key={sortBy + index} onClick={()=> updateSortFilter(sortBy)}>{sortBy}</div>;
-                            })
-                        }
-                    </div>
+
                 </div>
             );
         };
         if (displayInTopStrip === 'CLOSED') {
             return getClosedStrip();
         } else {
-            return <TopStripDisplay items={FILTERS[displayInTopStrip].items} filterFunc={onChangeCategory}
-                                    selected={selected}
-                                    closeFunc={()=>updateTopStripDisplay('CLOSED')}></TopStripDisplay>;
+            return (
+                <div className="top-strip-display">
+
+                    <TopStripDisplay items={FILTERS[displayInTopStrip].items} filterFunc={onChangeCategory}
+                                     selected={selected}
+                                     closeFunc={()=>updateTopStripDisplay('CLOSED')}></TopStripDisplay>
+                </div>
+            );
         }
     }
 }
@@ -55,7 +67,8 @@ export default class FilterContainer extends Component {
 
 function mapStateToProps(state) {
     return {
-        displayInTopStrip: state.topStripDisplay
+        displayInTopStrip: state.topStripDisplay,
+        selectedSortFilter: state.sortFilter
     };
 }
 

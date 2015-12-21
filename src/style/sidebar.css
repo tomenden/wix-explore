@@ -5,14 +5,14 @@
 
 .sidebar {
     background-color: #65c888;
-    width: 450px;
+    width: 25%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     text-align: center;
     /*padding: 376px 0;*/
-    transition: transform 1s;
+    transition: width 1s;
 }
 
 .sidebar-content {
@@ -21,15 +21,14 @@
 }
 
 .sidebar-body {
-    font-family: Helvetica45Light, sans-serif;
+    font-family: Helvetica55, sans-serif;
     color: #ffffff;
     font-size: 19px;
     font-weight: 300;
     line-height: 32px;
     text-align: center;
     width: 321px;
-    height: 115px;
-    margin: 44px auto;
+    margin: 38px auto;
 }
 
 .sidebar-header {
@@ -39,23 +38,23 @@
     /*margin: 0;*/
     /*margin: 16px 0;*/
     margin-bottom: 16px;
+    letter-spacing: 2px;
 }
 
 .divider {
     background-color: #ffffff;
-    width: 206px;
+    width: 210px;
     height: 1px;
     margin: 0 auto;
 }
 
 .sidebar-toggler {
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 42px;
-    height: 42px;
+    background-color: #84d3a0;
+    width: 48px;
+    height: 48px;
     position: absolute;
-    top: 141px;
-    right: 72px;
+    top: 0;
+    right: 0;
 }
 
 .sidebar-toggler-arrow {
@@ -64,6 +63,19 @@
     transform: translateY(-50%);
 }
 
+.sidebar-toggler-closed {
+    background-color: #84d3a0;
+    width: 32px;
+    height: 48px;
+}
+
+.sidebar-toggler-arrow-closed {
+    transform: rotate(180deg);
+    margin-top: 50%;
+}
+
 .sidebar.hidden {
-    transform: translateX(-100%);
+    background-color: #65c888;
+    width: 32px;
+    height: 100%;
 }

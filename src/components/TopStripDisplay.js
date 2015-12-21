@@ -7,7 +7,7 @@ export default class TopStripDisplay extends Component {
     render() {
         let {items, selected, filterFunc, closeFunc} = this.props;
         return (
-            <ul className="top-strip-display">
+            <ul className="categories-open">
                 {
                     _.map(items, function (item, index) {
                         let classes = classNames({

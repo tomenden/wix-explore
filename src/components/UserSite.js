@@ -33,8 +33,7 @@ export default class UserSite extends Component {
                         </div>
                         <div className="social-section">
                             <img src="/src/images/comments.svg"/>
-                            <span className="disqus-comment-count" data-disqus-identifier={id}/>
-                            <a href={"http://localhost:3000/site/"+id+"#disqus_thread"}>{Math.floor((Math.random() * 5))}</a>
+                            <span className="disqus-comment-count" data-disqus-identifier={'' + id}>0</span>
 
                         </div>
 
@@ -46,9 +45,6 @@ export default class UserSite extends Component {
         )
     }
 
-    componentDidMount() {
-        DISQUSWIDGETS.getCount();
-    }
 }
 
 UserSite.propTypes = {
